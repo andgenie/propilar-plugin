@@ -1,6 +1,6 @@
 ---
 name: propilar-property-analysis
-description: 日本の収益不動産（アパート・区分マンション・戸建て・一棟物件）の購入を検討しているとき、Propilar の MCP ツールで収支・キャッシュフロー・利回り・DSCR・IRR を計算し、判定（収支良好／要確認項目あり／リスク要因多い）とその読み方を説明する。「この物件買っていい？」「利回り・CFを計算して」「金利が上がったら？」「自己資金はいくら入れるべき？」「マイソクを分析して」のような相談で使う。Use when the user asks to analyze a Japanese rental property investment (yield, cash flow, DSCR, IRR, loan stress test) with the Propilar MCP server.
+description: 日本の収益不動産（アパート・区分マンション・戸建て・一棟物件）の購入を検討しているとき、Propilar の MCP ツールで収支・キャッシュフロー・利回り・DSCR・IRR を計算し、判定（収支良好／要確認項目あり／リスク要因多い）とその読み方を説明する。「この物件買っていい？」「利回り・CFを計算して」「金利が上がったら？」「自己資金はいくら入れるべき？」「マイソクを分析して」「この物件ページ（URL）を見て」のような相談や、物件資料の PDF・画像・ポータルサイトの URL を渡されたときに使う。Use when the user asks to analyze a Japanese rental property investment (yield, cash flow, DSCR, IRR, loan stress test) with the Propilar MCP server, including from a listing PDF, image or URL.
 ---
 
 # Propilar で物件を分析する
@@ -16,6 +16,7 @@ Propilar の MCP サーバ（`https://mcp.propilar.com/mcp`）のツールを使
 ## 手順
 
 1. **入力を集める** — 必須は 購入価格・想定月額家賃（満室）・借入額 の3つ。分かれば 金利・返済年数・構造・築年月・空室率 も聞く。聞き方と既定値は [references/inputs.md](references/inputs.md)
+   - マイソク・物件概要書・レントロールの PDF や画像、ポータルサイトの URL を渡されたら、自分で読んで数値を抜き出し、**表で見せてユーザーに確認してから**分析する。満室想定と現況の家賃、年額と月額の取り違えに注意する。手順は [references/from-documents.md](references/from-documents.md)
    - 単位を変換して渡す: 万円 → 円（4,000万円 → `40000000`）、% → 小数（2% → `0.02`）
    - 物件種別（区分マンションか）と築年は、判定の限界を伝えるのに使うので必ず確認する
 2. **分析する** — `analyze_property` を呼ぶ。保存はしない
@@ -28,6 +29,7 @@ Propilar の MCP サーバ（`https://mcp.propilar.com/mcp`）のツールを使
 5. **限界を伝える** — 該当するときは必ず一言添える
    - 区分マンション: 管理費・修繕積立金は入力できず、運営費は家賃の約10%で自動見積もり。実際の管理費等が高いと判定が甘く出る。正確に見たいときは結果の `analysisUrl`（propilar.com、条件入力済み）で管理費を入れ直してもらう
    - 築古（特に1981年5月以前の旧耐震、木造で築22年超など法定耐用年数を超えるもの）: 旧耐震・大規模修繕・残存耐用年数を超える融資期間は判定に入っていない。融資期間を残存耐用年数に合わせた条件でも `analyze_property` を回し、判定が変わるか確かめる
+   - 物件資料に借地権・再建築不可・既存不適格・告知事項などの記載があれば、判定の外のリスクとして伝える
 6. **保存は頼まれたときだけ** — 「保存して」と言われたら `create_property` → `create_scenario`（または既存シナリオに `save_analysis`）。自動で保存しない
 
 ## 説明のしかた
