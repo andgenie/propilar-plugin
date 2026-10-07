@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "propilar",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "日本の収益不動産の収支・キャッシュフロー・DSCR・IRR を計算し、購入前の判定を返す Propilar の MCP サーバとスキル",
   "author": { "name": "Propilar", "url": "https://propilar.com" },
   "homepage": "https://propilar.com",
