@@ -7,7 +7,7 @@
       "name": "propilar",
       "source": "./",
       "description": "収益不動産の収支・CF・DSCR・IRR の計算と購入前の判定",
-      "category": "productivity"
+      "category": "finance"
     }
   ]
 }

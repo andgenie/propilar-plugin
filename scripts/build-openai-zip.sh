@@ -2,12 +2,13 @@
 # Builds the ZIP uploaded to the OpenAI Plugin directory (ChatGPT / Codex).
 # Contents: plugin.json (Agent Plugins manifest with extensions.com.openai), mcp.json, assets/, skills/.
 #
-# The OpenAI portal requires the manifest `name` to match the existing plugin entry
-# (created by the first submission in 2026-04), so the name is rewritten in the ZIP only.
-# The repository keeps `propilar` so Claude Code / Codex / Antigravity install IDs stay `propilar@propilar`.
+# The OpenAI portal requires the manifest `name` to match the plugin entry being updated.
+# The entry created on 2026-10-07 uses `propilar` (same as the repository). The 2026-04 entry
+# (`app-69de2852bc808191922703b14cd1ad94`, an unpublished MCP app) cannot take plugin ZIPs.
+# Override with OPENAI_PLUGIN_NAME only if a different entry ever needs updating.
 set -euo pipefail
 
-OPENAI_PLUGIN_NAME="${OPENAI_PLUGIN_NAME:-app-69de2852bc808191922703b14cd1ad94}"
+OPENAI_PLUGIN_NAME="${OPENAI_PLUGIN_NAME:-propilar}"
 
 cd "$(dirname "$0")/.."
 node scripts/check-consistency.mjs
