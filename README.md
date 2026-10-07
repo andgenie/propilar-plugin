@@ -5,7 +5,7 @@
 - **MCP サーバ**: `https://mcp.propilar.com/mcp`（収支・CF・DSCR・IRR の計算、ストレステスト、感度分析、シナリオ比較、物件の保存）
 - **スキル**: `propilar-property-analysis`（入力の集め方、ツールの使い分け、判定の読み方と限界の伝え方）
 
-初回にブラウザで Propilar にログインします（API キーは不要）。無料プランは分析が月10回まで、Standard 以上は無制限です。分析結果は入力に基づく参考情報で、投資助言ではありません。
+初回にブラウザで Propilar にログインします（API キーは不要）。無料プランは分析が月30回まで、Standard 以上は無制限です。分析結果は入力に基づく参考情報で、投資助言ではありません。
 
 ## インストール
 
@@ -79,7 +79,7 @@ MCP サーバは別途設定が必要です（例: Claude Code なら `claude mc
 
 ## English
 
-Propilar analyzes Japanese rental-property investments: cash flow, yields, DSCR, IRR, stress tests, sensitivity matrices and scenario comparisons, ending in a judgement (good / needs review / high risk). This repo packages the Propilar MCP server (`https://mcp.propilar.com/mcp`, OAuth sign-in, no API key) and an Agent Skill for Claude Code, Codex and Antigravity CLI. Free accounts get 10 analyses per month. Results are informational, not investment advice.
+Propilar analyzes Japanese rental-property investments: cash flow, yields, DSCR, IRR, stress tests, sensitivity matrices and scenario comparisons, ending in a judgement (good / needs review / high risk). This repo packages the Propilar MCP server (`https://mcp.propilar.com/mcp`, OAuth sign-in, no API key) and an Agent Skill for Claude Code, Codex and Antigravity CLI. Free accounts get 30 analyses per month. Results are informational, not investment advice.
 
 - Claude Code: `/plugin marketplace add andgenie/propilar-agent-plugin` then `/plugin install propilar@propilar`
 - Codex: `codex plugin marketplace add andgenie/propilar-agent-plugin` then `codex plugin add propilar@propilar`
