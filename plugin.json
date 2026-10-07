@@ -14,7 +14,7 @@
         "displayName": "Propilar",
         "shortDescription": "不動産投資の収支と購入判定",
         "longDescription": "物件価格・家賃・ローン条件から、利回り・キャッシュフロー・DSCR・IRR を計算し、収支の判定（収支良好／要確認項目あり／リスク要因多い）をカードで表示します。金利上昇や空室増加のストレステスト、自己資金や金利を変えたときの感度マトリクス、複数条件の比較もできます。結果は入力に基づく参考情報で、投資助言ではありません。Propilar のアカウントでログインして使います（無料プランは分析が月30回まで）。",
-        "developerName": "Andgenie Co., Ltd.",
+        "developerName": "Andengine Co., Ltd.",
         "category": "Productivity",
         "capabilities": ["不動産投資の収支分析", "購入前の判定", "ストレステスト・感度分析"],
         "websiteURL": "https://propilar.com",
