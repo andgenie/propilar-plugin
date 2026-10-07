@@ -1,4 +1,4 @@
-# Propilar Agent Plugin
+# Propilar Plugin
 
 [Propilar](https://propilar.com) の不動産投資分析を、Claude Code・Codex・Antigravity CLI から使うためのプラグインです。
 
@@ -12,16 +12,16 @@
 ### Claude Code
 
 ```
-/plugin marketplace add andgenie/propilar-agent-plugin
+/plugin marketplace add andgenie/propilar-plugin
 /plugin install propilar@propilar
 ```
 
-インストール後、`/mcp` から `propilar` にログインします。シェルからは `claude plugin marketplace add andgenie/propilar-agent-plugin` → `claude plugin install propilar@propilar`。
+インストール後、`/mcp` から `propilar` にログインします。シェルからは `claude plugin marketplace add andgenie/propilar-plugin` → `claude plugin install propilar@propilar`。
 
 ### Codex
 
 ```
-codex plugin marketplace add andgenie/propilar-agent-plugin
+codex plugin marketplace add andgenie/propilar-plugin
 codex plugin add propilar@propilar
 codex mcp login propilar
 ```
@@ -31,8 +31,8 @@ Codex CLI の `/plugins` からもインストールできます。
 ### Antigravity CLI
 
 ```
-git clone https://github.com/andgenie/propilar-agent-plugin
-agy plugin install ./propilar-agent-plugin
+git clone https://github.com/andgenie/propilar-plugin
+agy plugin install ./propilar-plugin
 ```
 
 ログインは Settings → Customizations → Authenticate から行います。
@@ -44,7 +44,7 @@ ChatGPT のプラグインディレクトリへの掲載を準備中です。
 ### スキルだけ使う
 
 ```
-npx skills add andgenie/propilar-agent-plugin
+npx skills add andgenie/propilar-plugin
 ```
 
 MCP サーバは別途設定が必要です（例: Claude Code なら `claude mcp add --transport http propilar https://mcp.propilar.com/mcp`）。
@@ -82,9 +82,9 @@ MCP サーバは別途設定が必要です（例: Claude Code なら `claude mc
 
 Propilar analyzes Japanese rental-property investments: cash flow, yields, DSCR, IRR, stress tests, sensitivity matrices and scenario comparisons, ending in a judgement (good / needs review / high risk). This repo packages the Propilar MCP server (`https://mcp.propilar.com/mcp`, OAuth sign-in, no API key) and an Agent Skill for Claude Code, Codex and Antigravity CLI. Free accounts get 30 analyses per month. Results are informational, not investment advice.
 
-- Claude Code: `/plugin marketplace add andgenie/propilar-agent-plugin` then `/plugin install propilar@propilar`
-- Codex: `codex plugin marketplace add andgenie/propilar-agent-plugin` then `codex plugin add propilar@propilar`
-- Antigravity CLI: clone the repo, then `agy plugin install ./propilar-agent-plugin`
+- Claude Code: `/plugin marketplace add andgenie/propilar-plugin` then `/plugin install propilar@propilar`
+- Codex: `codex plugin marketplace add andgenie/propilar-plugin` then `codex plugin add propilar@propilar`
+- Antigravity CLI: clone the repo, then `agy plugin install ./propilar-plugin`
 
 ## License
 
