@@ -1,0 +1,13 @@
+{
+  "name": "propilar",
+  "description": "Propilar — 日本の不動産投資分析（MCP サーバ + スキル）",
+  "owner": { "name": "Propilar", "url": "https://propilar.com" },
+  "plugins": [
+    {
+      "name": "propilar",
+      "source": "./",
+      "description": "収益不動産の収支・CF・DSCR・IRR の計算と購入前の判定",
+      "category": "productivity"
+    }
+  ]
+}

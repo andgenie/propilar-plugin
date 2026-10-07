@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Roof (triangle) -->
+  <path d="M16 3L3 14h26L16 3z" fill="#0d9184"/>
+  <!-- Pillar left -->
+  <rect x="8" y="14" width="4" height="14" rx="0.5" fill="#0d9184"/>
+  <!-- Pillar center (main pillar - taller, emphasized) -->
+  <rect x="14" y="12" width="4" height="17" rx="0.5" fill="#0a7a6f"/>
+  <!-- Pillar right -->
+  <rect x="20" y="14" width="4" height="14" rx="0.5" fill="#0d9184"/>
+  <!-- Base -->
+  <rect x="6" y="28" width="20" height="2" rx="1" fill="#0d9184"/>
+</svg>

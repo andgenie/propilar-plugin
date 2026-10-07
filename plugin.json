@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "propilar",
+  "version": "0.1.0",
+  "description": "日本の収益不動産の収支・キャッシュフロー・DSCR・IRR を計算し、購入前の判定を返す Propilar の MCP サーバとスキル",
+  "author": { "name": "Propilar", "url": "https://propilar.com" },
+  "homepage": "https://propilar.com",
+  "repository": "https://github.com/andgenie/propilar-agent-plugin",
+  "license": "MIT",
+  "keywords": ["real-estate", "investment", "japan", "mcp", "propilar"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Propilar",
+        "shortDescription": "不動産投資の収支と購入判定",
+        "longDescription": "物件価格・家賃・ローン条件から、利回り・キャッシュフロー・DSCR・IRR を計算し、収支の判定（収支良好／要確認項目あり／リスク要因多い）をカードで表示します。金利上昇や空室増加のストレステスト、自己資金や金利を変えたときの感度マトリクス、複数条件の比較もできます。結果は入力に基づく参考情報で、投資助言ではありません。Propilar のアカウントでログインして使います（無料プランは分析が月10回まで）。",
+        "developerName": "Propilar",
+        "category": "Productivity",
+        "capabilities": ["不動産投資の収支分析", "購入前の判定", "ストレステスト・感度分析"],
+        "websiteURL": "https://propilar.com",
+        "supportURL": "https://propilar.com/contact",
+        "privacyPolicyURL": "https://propilar.com/privacy",
+        "termsOfServiceURL": "https://propilar.com/terms",
+        "defaultPrompt": [
+          "4,000万円・家賃月30万円・借入3,600万円（金利2%・30年）の木造アパートを分析して",
+          "この物件、金利が1%上がったら収支はどうなる？",
+          "自己資金を1割・2割・3割入れた場合を比べて"
+        ],
+        "brandColor": "#0D9184",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}
